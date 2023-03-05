@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moexfilm/features/auth/presentation/widgets/google_button.dart';
 
 class LoginScreen extends StatelessWidget {
   static const String path = "/";
@@ -11,6 +12,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
         body: Center(
             child: Column(
+      mainAxisSize: MainAxisSize.max,
       children: [
         Container(
           margin: EdgeInsets.all(10),
@@ -19,13 +21,17 @@ class LoginScreen extends StatelessWidget {
           color: Colors.red,
           child: Text("DIBUJITO"),
         ),
-        const Text(
-          "Your site to see ur content in High Quality",
-          style: TextStyle(
-            fontSize: 18,
+        Padding(
+          padding: EdgeInsets.all(10),
+          child: const Text(
+            "Your site to see ur content in High Quality",
+            style: TextStyle(
+              fontSize: 28,
+            ),
           ),
         ),
-        OutlinedButton(onPressed: () {}, child: Text("Login With Google"))
+        SizedBox(height: 120),
+        GoogleButton(onPressed: () {})
       ],
     )));
   }
