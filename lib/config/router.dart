@@ -5,5 +5,5 @@ final router = GoRouter(routes: [
   GoRoute(
       path: LoginScreen.path,
       name: LoginScreen.name,
-      builder: (context, state) => const LoginScreen())
+      builder: (context, state) => LoginScreen())
 ]);

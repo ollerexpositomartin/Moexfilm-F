@@ -1,5 +1,7 @@
+import 'package:moexfilm/core/exceptions/login_exception.dart';
+
 abstract class AuthService {
-  void login(String email, String password);
-  void register(String email, String password, String passwordConfirmed);
-  void loginWithGoogle();
+  Future<void> login(String email, String password);
+  Future<void> register(String email, String password, String passwordConfirmed);
+  Future<void> loginWithGoogle();
 }

@@ -7,4 +7,15 @@ class AuthProvider extends StateNotifier<DataState> {
   AuthProvider(this._authService) : super(const DataState.initial());
 
   final AuthService _authService;
+
+  Future<void> loginWithGoogle() async {
+    state = const DataState.loading();
+
+    try {
+      _authService.loginWithGoogle();
+      state = const DataState.success(data: true);
+    } catch (e) {
+      state = DataState.error(message: e.toString());
+    }
+  }
 }
