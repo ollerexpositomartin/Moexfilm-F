@@ -1,6 +1,6 @@
 import 'package:moexfilm/features/auth/services/auth_service.dart';
 
-class AuthServiceImpl implements AuthService {
+class AuthServiceSupabase implements AuthService {
   @override
   void login(String email, String password) {
     // TODO: implement login
