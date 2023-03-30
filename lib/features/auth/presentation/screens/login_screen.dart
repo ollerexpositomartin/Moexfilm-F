@@ -11,13 +11,16 @@ class LoginScreen extends ConsumerWidget {
 
   static const String path = "/";
   static const String name = "Login";
-  final authServiceProvider = Provider<AuthService>((ref) => AuthServiceSupabase());
-  
+  final authServiceProvider =
+      Provider<AuthService>((ref) => AuthServiceSupabase());
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final authNotifier = StateNotifierProvider<AuthProvider, DataState>((ref) => AuthProvider(ref.read(authServiceProvider)));
-    
+    final authNotifier = StateNotifierProvider<AuthProvider, DataState>(
+        (ref) => AuthProvider(ref.read(authServiceProvider)));
+    final authState = ref.watch(authNotifier);
+
+
     _handleLogin() {
       ref.read(authNotifier.notifier).loginWithGoogle();
     }

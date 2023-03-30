@@ -3,6 +3,8 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:moexfilm/core/exceptions/exceptions.dart';
 
 class AuthServiceSupabase implements AuthService {
+  final authRedirectUri = 'io.supabase.flutterquickstart://login-callback/';
+
   @override
   Future<void> login(String email, String password) async {
     // TODO: implement login
@@ -10,8 +12,8 @@ class AuthServiceSupabase implements AuthService {
 
   @override
   Future<void> loginWithGoogle() async {
-    bool logged =
-        await Supabase.instance.client.auth.signInWithOAuth(Provider.google);
+    bool logged = await Supabase.instance.client.auth
+        .signInWithOAuth(Provider.google, redirectTo: authRedirectUri);
     if (!logged) {
       throw LoginException("No logged with google");
     }
