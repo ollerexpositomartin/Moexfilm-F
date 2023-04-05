@@ -9,7 +9,7 @@ class AppTheme {
   ThemeData get themeData {
     return ThemeData(brightness: _brightness).copyWith(
       colorScheme: _colorScheme,
-      scaffoldBackgroundColor: AppColors.primaryColor,
+      scaffoldBackgroundColor: AppColors.BACKGROUND_COLOR,
       textTheme: _textTheme,
       useMaterial3: true,
     );
@@ -21,10 +21,10 @@ class AppTheme {
       );
 
   ColorScheme get _colorScheme => ColorScheme.fromSeed(
-      seedColor: AppColors.primaryColor,
+      seedColor: AppColors.BACKGROUND_COLOR,
       brightness: _brightness,
-      background: AppColors.primaryColor,
-      primaryContainer: AppColors.primaryColor,
-      onBackground: AppColors.primaryColor,
-      onPrimaryContainer: AppColors.primaryColor);
+      background: AppColors.BACKGROUND_COLOR,
+      primaryContainer: AppColors.BACKGROUND_COLOR,
+      onBackground: AppColors.BACKGROUND_COLOR,
+      onPrimaryContainer: AppColors.BACKGROUND_COLOR);
 }

@@ -13,10 +13,11 @@ class GoogleButton extends StatelessWidget {
         onPressed?.call();
       },
       child: Ink(
+        width: 220,
         decoration: BoxDecoration(
-            color: Colors.white, borderRadius: BorderRadius.circular(10.0)),
+            color: Colors.black, borderRadius: BorderRadius.circular(10.0)),
         child: Padding(
-          padding: EdgeInsets.all(6),
+          padding: EdgeInsets.all(10),
           child: Wrap(
             crossAxisAlignment: WrapCrossAlignment.center,
             children: [
@@ -28,7 +29,7 @@ class GoogleButton extends StatelessWidget {
               SizedBox(width: 12),
               Text(
                 'Sign in with Google',
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.white),
               ),
             ],
           ),

@@ -12,7 +12,7 @@ class AuthProvider extends StateNotifier<DataState> {
     state = const DataState.loading();
 
     try {
-      _authService.loginWithGoogle();
+      await _authService.loginWithGoogle();
       state = const DataState.success(data: true);
     } catch (e) {
       state = DataState.error(message: e.toString());

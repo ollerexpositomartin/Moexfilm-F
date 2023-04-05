@@ -8,7 +8,7 @@ Future<void> main() async {
   await Supabase.initialize(
       url: "https://veplbweymcfyesluztaz.supabase.co",
       anonKey:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZlcGxid2V5bWNmeWVzbHV6dGF6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjgxOTYyNjUsImV4cCI6MTk4Mzc3MjI2NX0.FaU6PbOx7CoYGbxWC5qLKVABjX240tYh1HNuCfNUzNAeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZlcGxid2V5bWNmeWVzbHV6dGF6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjgxOTYyNjUsImV4cCI6MTk4Mzc3MjI2NX0.FaU6PbOx7CoYGbxWC5qLKVABjX240tYh1HNuCfNUzNA",
-      debug: false);
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZlcGxid2V5bWNmeWVzbHV6dGF6Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY2ODE5NjI2NSwiZXhwIjoxOTgzNzcyMjY1fQ.3tNXA9ZL8nnKu2tJpsKn4mhw9gD1H2TB1A7CofNJp_8",
+      debug: true);
   runApp(ProviderScope(child: MoexfilmApp()));
 }
