@@ -24,7 +24,6 @@ class LoginScreen extends ConsumerWidget {
 
     final authNotifier = StateNotifierProvider<AuthProvider, DataState>(
         (ref) => AuthProvider(ref.read(authServiceProvider)));
-    final authState = ref.watch(authNotifier);
 
     _handleLogin() {
       ref.read(authNotifier.notifier).loginWithGoogle();
